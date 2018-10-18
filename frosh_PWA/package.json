@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server -c-1"
   },
-  "keywords": [
+  "keywords": [ 
     "pwa",
     "progressive",
     "web",
