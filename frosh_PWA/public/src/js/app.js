@@ -11,3 +11,9 @@ window.addEventListener("beforeinstallprompt", function(event) {
   deferredPrompt = event;
   return false;
 });
+
+setTimeout(() => {
+  console.log("Executed once timer is done");
+}, 3000);
+
+console.log("This is executed after setTimeOut");
