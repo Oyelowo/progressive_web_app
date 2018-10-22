@@ -20,16 +20,14 @@ let promise = new Promise((resolve, reject) => {
 });
 
 promise
-  .then(
-    response => {
-      return response + "lowo";
-    },
-    err => {
-      console.log(err.error, err.code)
-    }
-  )
+  .then(response => {
+    return response + "lowo";
+  })
   .then(anotherResponse => {
     console.log(anotherResponse);
+  })
+  .catch(err => {
+    console.log(err.error, err.code);
   });
 
 console.log("This is executed after setTimeOut");
