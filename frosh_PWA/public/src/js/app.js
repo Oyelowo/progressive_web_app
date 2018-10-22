@@ -14,12 +14,22 @@ window.addEventListener("beforeinstallprompt", function(event) {
 
 let promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("Executed once timer is done");
+    // resolve("Executed once timer is done");
+    reject({ code: 500, error: "something went wrong" });
   }, 3000);
 });
 
-promise.then(response => {
-  console.log(response);
-});
+promise
+  .then(
+    response => {
+      return response + "lowo";
+    },
+    err => {
+      console.log(err.error, err.code)
+    }
+  )
+  .then(anotherResponse => {
+    console.log(anotherResponse);
+  });
 
 console.log("This is executed after setTimeOut");
